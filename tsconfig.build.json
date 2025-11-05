@@ -1,0 +1,10 @@
+// tsconfig.build.json  (used for production build)
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "tests", "dist", "jest.config.ts"]
+}
