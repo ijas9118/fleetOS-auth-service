@@ -14,8 +14,8 @@ const EnvSchema = z.object({
   REDIS_URL: z.string(),
   PRIVATE_KEY: z.string(),
   PUBLIC_KEY: z.string(),
-  JWT_EXPIRES_IN: z.string(),
-  JWT_REFRESH_EXPIRES_IN: z.string(),
+  ACCESS_TOKEN_EXP: z.string().default("15m"),
+  REFRESH_TOKEN_EXP: z.string().default("7d"),
 });
 
 export type env = z.infer<typeof EnvSchema>;

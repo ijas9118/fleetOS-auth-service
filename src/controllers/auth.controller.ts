@@ -49,4 +49,11 @@ export class AuthController {
     });
     res.status(STATUS_CODES.OK).json({ message: MESSAGES.AUTH.LOGIN_SUCCESS, data: { accessToken: tokens.accessToken } });
   };
+
+  refresh = async (req: Request, res: Response) => {
+    const { refreshToken } = req.body;
+
+    const tokens = await this._authService.refreshToken(refreshToken);
+    res.status(STATUS_CODES.OK).json({ message: MESSAGES.TOKEN.NEW_TOKENS, tokens });
+  };
 }

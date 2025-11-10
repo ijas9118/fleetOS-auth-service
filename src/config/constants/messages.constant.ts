@@ -8,6 +8,7 @@ export const MESSAGES = {
   TOKEN: {
     EXPIRED: "Access token expired.",
     INVALID_REFRESH_TOKEN: "Invalid or expired refresh token.",
+    NEW_TOKENS: "New tokens generated",
   },
   OTP: {
     SENT: "OTP sent to your email.",

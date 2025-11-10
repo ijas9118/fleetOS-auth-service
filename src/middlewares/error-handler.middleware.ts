@@ -10,7 +10,6 @@ export function notFoundHandler(req: Request, res: Response, _next: NextFunction
   res.status(STATUS_CODES.NOT_FOUND).json({
     success: false,
     error: {
-      code: "NOT_FOUND",
       message: `Resource not found: ${req.method} ${req.originalUrl}`,
       path: req.originalUrl,
       method: req.method,

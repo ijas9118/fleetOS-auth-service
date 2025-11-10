@@ -2,8 +2,8 @@ import type { RedisClientType } from "redis";
 
 import { createClient } from "redis";
 
-import logger from "./logger.js";
-import env from "./validate-env.js";
+import logger from "./logger";
+import env from "./validate-env";
 
 // eslint-disable-next-line import/no-mutable-exports
 let redisClient: RedisClientType;

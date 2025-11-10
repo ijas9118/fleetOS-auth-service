@@ -29,7 +29,6 @@ describe("createApp()", () => {
     expect(res.body).toEqual({
       success: false,
       error: {
-        code: "NOT_FOUND",
         message: "Resource not found: GET /nonexistent",
         path: "/nonexistent",
         method: "GET",
