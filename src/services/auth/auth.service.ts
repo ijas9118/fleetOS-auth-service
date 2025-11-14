@@ -4,12 +4,13 @@ import bcrypt from "bcryptjs";
 import { inject } from "inversify";
 import jwt from "jsonwebtoken";
 
+import type { AuthTokens, AuthUser } from "@/dto/auth.response.dto";
 import type { LoginDTO } from "@/dto/login.dto";
 import type { RegisterDTO } from "@/dto/register.dto";
 import type { VerifyOtpDTO } from "@/dto/verify-otp.dto";
 import type { ITokenRepository } from "@/repositories/token/token.repository.interface";
 import type { IUserRepository } from "@/repositories/user/user.repository.interface";
-import type { AuthTokens, AuthUser } from "@/dto/auth.response.dto";
+import type { JWTPayload } from "@/types";
 
 import { MESSAGES } from "@/config/constants/messages.constant";
 import { STATUS_CODES } from "@/config/constants/status-codes.constant";
@@ -19,7 +20,6 @@ import { HttpError } from "@/utils/http-error-class";
 
 import type { IOtpService } from "../otp/otp.service.interface";
 import type { IAuthService } from "./auth.service.interface";
-import { JWTPayload } from "@/types";
 
 export class AuthService implements IAuthService {
   constructor(

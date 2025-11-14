@@ -1,7 +1,7 @@
+import type { AuthTokens, AuthUser } from "@/dto/auth.response.dto";
 import type { LoginDTO } from "@/dto/login.dto";
 import type { RegisterDTO } from "@/dto/register.dto";
 import type { VerifyOtpDTO } from "@/dto/verify-otp.dto";
-import type { AuthTokens, AuthUser } from "@/dto/auth.response.dto";
 
 export type IAuthService = {
   /**

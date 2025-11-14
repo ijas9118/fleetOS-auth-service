@@ -13,4 +13,3 @@ export type StoredOtp = {
   password: string;
   otp: string;
 };
-

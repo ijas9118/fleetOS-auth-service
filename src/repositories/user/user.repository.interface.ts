@@ -1,7 +1,7 @@
 import type { RegisterDTO } from "@/dto/register.dto";
 import type { IUser } from "@/models/user.model";
 
-export interface IUserRepository  {
+export interface IUserRepository {
   /**
    * Retrieves a user by email.
    *
